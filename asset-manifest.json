@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/archive-arg-react/static/css/main.7e83b76c.css",
+    "main.js": "/archive-arg-react/static/js/main.21584135.js",
+    "index.html": "/archive-arg-react/index.html",
+    "main.7e83b76c.css.map": "/archive-arg-react/static/css/main.7e83b76c.css.map",
+    "main.21584135.js.map": "/archive-arg-react/static/js/main.21584135.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e83b76c.css",
+    "static/js/main.21584135.js"
+  ]
+}
