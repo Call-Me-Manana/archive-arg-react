@@ -1,0 +1,59 @@
+.glitch-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.glitch-text {
+    position: relative;
+    display: inline-block;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.6em;
+    line-height: 1.3em;
+}
+
+.glitch-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch-main {
+    color: lime;
+    z-index: 3;
+}
+
+.glitch-red {
+    color: red;
+    z-index: 2;
+    clip-path: inset(0 0 0 0);
+    animation: glitchMove 2s infinite linear alternate;
+    opacity: 0.7;
+}
+
+.glitch-cyan {
+    color: cyan;
+    z-index: 1;
+    clip-path: inset(0 0 0 0);
+    animation: glitchMove 2s infinite linear alternate-reverse;
+    opacity: 0.7;
+}
+
+@keyframes glitchMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, 1px);
+    }
+    50% {
+        transform: translate(1px, -5px);
+    }
+    75% {
+        transform: translate(-1px, -1px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
