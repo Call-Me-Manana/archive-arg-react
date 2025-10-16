@@ -12,7 +12,7 @@ import Blog from "./pages/blog/Blog";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/archive-arg-react">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
