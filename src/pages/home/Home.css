@@ -2,7 +2,8 @@ body,
 html {
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
+    background: #111
+        url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .home-container {

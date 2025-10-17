@@ -1,7 +1,13 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
 /* ======= GLOBAL RETRO BACKGROUND ======= */
 .geo-bg {
-    background: url("https://www.cameronsworld.net/img/content/94/bg.gif")
-        repeat;
+    background: #111
+        url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     min-height: 80vh;
     display: flex;
     justify-content: center;
@@ -11,23 +17,38 @@
 
 /* ======= MAIN CONTAINER ======= */
 .geo-container {
+    position: relative;
     width: 100vw;
     height: 85vh;
     border: 5px ridge magenta;
     background: rgba(0, 0, 0, 0.8);
     padding: 15px;
-    box-shadow: 0 0 30px magenta;
     text-align: center;
-    animation: flicker 2s infinite alternate;
+    z-index: 0;
 }
 
-@keyframes flicker {
+.geo-container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 3px solid magenta;
+    pointer-events: none;
+    animation: flicker-glow 2s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes flicker-glow {
     0%,
     100% {
-        box-shadow: 0 0 25px magenta;
+        border-color: magenta;
+        box-shadow: 0 0 15px magenta;
     }
     50% {
-        box-shadow: 0 0 35px cyan;
+        border-color: cyan;
+        box-shadow: 0 0 25px cyan;
     }
 }
 

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Blog from "./pages/blog/Blog";
-// import Forum from "./pages/Forum";
+import Forum from "./pages/forum/Forum";
 // import Message from "./pages/Message";
 // import Glitch1 from "./pages/Glitch1";
 // import Archive2 from "./pages/Archive2";
@@ -16,8 +16,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
-                {/* <Route path="/forum" element={<Forum />} />
-                <Route path="/message" element={<Message />} />
+                <Route path="/forum" element={<Forum />} />
+                {/*<Route path="/message" element={<Message />} />
                 <Route path="/glitch1" element={<Glitch1 />} />
                 <Route path="/archive2" element={<Archive2 />} />
                 <Route path="/glitch2" element={<Glitch2 />} />
