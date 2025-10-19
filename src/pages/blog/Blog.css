@@ -8,7 +8,7 @@ body,
 .geo-bg {
     background: #111
         url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body,
 .geo-container {
     position: relative;
     width: 100vw;
-    height: 85vh;
+    min-height: 90vh;
     border: 5px ridge magenta;
     background: rgba(0, 0, 0, 0.8);
     padding: 15px;
@@ -91,6 +91,8 @@ body,
     color: #fff;
     font-family: "Verdana", sans-serif;
     text-align: left;
+    height: 60vh;
+    overflow-y: auto;
 }
 
 .geo-content h2 {
