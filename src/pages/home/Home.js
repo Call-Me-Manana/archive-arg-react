@@ -1,8 +1,19 @@
-import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
+    const sounds = {
+        open: new Audio(
+            "https://www.soundjay.com/communication/sounds/modem-calling-tone-01.mp3"
+        ),
+    };
+    useEffect(() => {
+        // звук при открытии страницы
+        sounds.open.volume = 0.3;
+        const t = setTimeout(() => sounds.open.play().catch(() => {}), 600);
+        return () => clearTimeout(t);
+    }, []);
     return (
         <div className="home-container">
             <h1 className="home-title">Архив исчезнувших сайтов</h1>
@@ -16,8 +27,8 @@ export default function Home() {
 
             <p>
                 Некоторые страницы сохранились частично, другие ведут себя
-                неожиданно или показывают забавные ошибки. Каждая страница —
-                маленький кусочек цифровой истории.
+                неожиданно. Каждая страница — маленький кусочек цифровой
+                истории.
             </p>
 
             <p>Вот несколько интересных находок:</p>

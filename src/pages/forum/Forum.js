@@ -10,7 +10,7 @@ export default function Forum() {
     const banner =
         "https://www.cameronsworld.net/img/content/22/left-side/28.gif";
     const checkForumCode = () => {
-        if (code === "10111214162005") {
+        if (code === "123") {
             navigate("/message");
         } else {
             setFeedback("Неверный код...");

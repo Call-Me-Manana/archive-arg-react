@@ -1,0 +1,126 @@
+.archive-page {
+    background: #0a0018;
+    color: #b8baff;
+    font-family: "Courier New", monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archive-terminal {
+    background: #0f0220;
+    border: 1px solid #3a2a60;
+    padding: 20px 30px;
+    width: 80%;
+    max-width: 900px;
+    height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(128, 64, 255, 0.2);
+    animation: flicker 2s infinite alternate;
+}
+
+.archive-terminal h1 {
+    color: #c5a8ff;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.terminal-content p {
+    display: block;
+    margin: 2px 0;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+.ok {
+    color: #86ff91;
+}
+
+.warn {
+    color: #ffea7a;
+}
+
+.fail {
+    color: #ff6f6f;
+}
+
+/* === Глитч эффект === */
+.glitch-text {
+    position: relative;
+    display: inline-block;
+    animation: glitch 0.6s infinite;
+}
+
+.glitch-text.intense {
+    animation: glitch-intense 0.25s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 1px 0 red, -1px 0 cyan;
+    }
+    25% {
+        text-shadow: -2px 0 magenta, 2px 0 lime;
+    }
+    50% {
+        text-shadow: 1px 0 blue, -1px 0 yellow;
+    }
+    75% {
+        text-shadow: -2px 0 cyan, 2px 0 red;
+    }
+    100% {
+        text-shadow: 1px 0 red, -1px 0 cyan;
+    }
+}
+
+@keyframes glitch-intense {
+    0% {
+        transform: translate(0);
+        text-shadow: 2px 0 red, -2px 0 cyan;
+    }
+    20% {
+        transform: translate(-2px, 1px);
+        text-shadow: -1px -1px lime, 1px 1px magenta;
+    }
+    40% {
+        transform: translate(2px, -1px);
+        text-shadow: 3px 0 blue, -3px 0 yellow;
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* === Эффект старого монитора === */
+@keyframes flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        opacity: 0.99;
+    }
+    20%,
+    24%,
+    55% {
+        opacity: 0.4;
+    }
+}
+
+.file-link {
+    color: #a7e4ff;
+    text-decoration: none;
+}
+
+.file-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
