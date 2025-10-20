@@ -8,14 +8,14 @@ export default function Compose({ onBack, onSuccess, originalSender }) {
     const [subject, setSubject] = useState("");
     const glitchHints = ["7", "2", "9"];
     const [showWarning, setShowWarning] = useState(false);
-    const correctSubject = "Секрет";
+    const correctSubject = "DARPA";
     const correctCode = "3715729";
     const { glitch, triggerGlitch } = useGlitchMessageSend();
 
     const handleSend = () => {
         triggerGlitch("⚠️ Сбой отправки… Система нестабильна!");
 
-        if (subject.trim() === correctSubject) {
+        if (subject.trim().toUpperCase() === correctSubject) {
             setText("");
             glitchHints.forEach((digit, idx) => {
                 setTimeout(() => {

@@ -11,7 +11,7 @@ export default function Archive() {
         "[OK] fragment_002 restored",
         "[WARN] fragment_003 corrupted",
         "[FAIL] fragment_004 missing",
-        "> open file: diary_001.txt",
+        "> open file: diary_003.txt",
         "> open file: memory_dump_07.bin",
         "> done.",
     ];
@@ -48,11 +48,11 @@ export default function Archive() {
 
                         return (
                             <p key={index} className={className}>
-                                {line === "> open file: diary_001.txt" ? (
+                                {line === "> open file: diary_003.txt" ? (
                                     <>
                                         {"> open file: "}
                                         <Link to="/diary" className="file-link">
-                                            diary_001.txt
+                                            diary_003.txt
                                         </Link>
                                     </>
                                 ) : (
